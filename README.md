@@ -1,4 +1,4 @@
-# The Bunnies, Inc. 
+# [The Bunnies, Inc. ](http://ambrosechua.github.com/thebunniesinc)
 
 The Bunnies, Inc is still in alpha. Help is strongly appreciated. See my progress at: [j.mp/bunniesalpha](http://j.mp/bunniesalpha)
 
