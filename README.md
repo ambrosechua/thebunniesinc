@@ -1,9 +1,12 @@
 thebunniesinc
 =============
 
-The Bunnies, Inc is still in alpha (v0.0.1a). 
-The page: http://j.mp/bunniesalpha
+The Bunnies, Inc is still in alpha. Help is strongley appreciated. See my progress at: http://j.mp/bunniesalpha
 
-A  HTML5 and CSS3 game built with jQuery, G. Maps API and Canvas Element. 
+Description
+-----------
+*A  HTML5 and CSS3 game built with jQuery, G. Maps API and Canvas Element. 
 
-CC BY-NC-SA see LICENSE.md
+License
+-------
+*CC BY-SA see LICENSE.md
