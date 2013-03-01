@@ -1,5 +1,5 @@
-thebunniesinc
-=============
+The Bunnies, Inc. 
+=================
 
 The Bunnies, Inc is still in alpha. Help is strongley appreciated. See my progress at: http://j.mp/bunniesalpha
 
