@@ -1,5 +1,7 @@
 # [The Bunnies, Inc. ](http://ambrosechua.github.com/thebunniesinc)
 
+Follow [@thebunniesinc](http://twitter.com/thebunniesinc) for updates. 
+
 The Bunnies, Inc is still in alpha. Help is strongly appreciated. See my progress at: [j.mp/bunniesalpha](http://j.mp/bunniesalpha)
 
 For those who want to help in this game, contact me at [amb.ccm@gmail.com](mailto:amb.ccm@gmail.com) . 
