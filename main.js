@@ -1,10 +1,14 @@
 
 step=3;
 stti=10;
+frames=stti/2;
 interf=0;
 interb=0;
 interl=0;
 interr=0;
+player["x"]=0;
+player["y"]=0;
+evil;
 
 function angle(x, y, bx, by) {
 return Math.atan2(bx-x, by-y)/Math.PI*-180;
@@ -12,15 +16,19 @@ return Math.atan2(bx-x, by-y)/Math.PI*-180;
 
 function dpf() {
 map.panBy(0, -step);
+player["x"]-=step;
 }
 function dpb() {
 map.panBy(0, step);
+player["x"]+=step;
 }
 function dpl() {
 map.panBy(-step, 0);
+player["y"]-=step;
 }
 function dpr() {
 map.panBy(step, 0);
+player["y"]+=step;
 }
 
 $("#endg").click(function() {
