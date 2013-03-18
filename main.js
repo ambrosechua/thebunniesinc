@@ -22,6 +22,29 @@ map.panBy(-step, 0);
 function dpr() {
 map.panBy(step, 0);
 }
+
+$("#endg").click(function() {
+window.location.reload();
+});
+$("#aboutc").click(function() {
+$("#aboutc").fadeOut();
+});
+$("#about").click(function() {
+$("#aboutc").fadeIn();
+});
+
+window.addEventListener('load', function(e) {
+window.applicationCache.addEventListener('updateready', function(e) {
+if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+window.applicationCache.swapCache();
+if (confirm('An update for this game is already downloaded. Update now? ')) {
+window.location.reload();
+}
+} else {
+}
+}, false);
+}, false);
+
 function setin(dir) {
 //functorun=functor;
 //functorun();
@@ -223,10 +246,6 @@ clrin(3);
 }
 });
 }
-
-
-
-
 
 
 function end() {
