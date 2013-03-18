@@ -37,7 +37,7 @@ window.addEventListener('load', function(e) {
 window.applicationCache.addEventListener('updateready', function(e) {
 if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
 window.applicationCache.swapCache();
-if (confirm('An update for this game is already downloaded. Update now? ')) {
+if (confirm('An update for this game has been downloaded. Update now? ')) {
 window.location.reload();
 }
 } else {
