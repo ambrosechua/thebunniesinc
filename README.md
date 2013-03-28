@@ -2,7 +2,7 @@
 
 Follow [@thebunniesinc](http://twitter.com/thebunniesinc) for updates. 
 
-*WARNING* Game is not playable. Proceed at your own risk. 
+**WARNING** Game is not playable. Proceed at your own risk. 
 
 The Bunnies, Inc is still in alpha. Help is strongly appreciated. See my progress at: [j.mp/bunniesalpha](http://j.mp/bunniesalpha)
 
