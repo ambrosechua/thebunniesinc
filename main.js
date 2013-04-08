@@ -1,3 +1,4 @@
+$(document).ready(function() {
 
 step=3;
 stti=10;
@@ -313,3 +314,4 @@ start();
 }, 4500);
 }
 
+});
