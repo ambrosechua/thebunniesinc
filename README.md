@@ -2,9 +2,9 @@
 
 Follow [@thebunniesinc](http://twitter.com/thebunniesinc) for updates. 
 
-The Bunnies, Inc is still in alpha. Help is strongly appreciated. See my progress at: [j.mp/bunniesalpha](http://j.mp/bunniesalpha)
+**WARNING** Game is not playable. Proceed at your own risk. 
 
-For those who want to help in this game, contact me at [amb.ccm@gmail.com](mailto:amb.ccm@gmail.com) . 
+The Bunnies, Inc is still in alpha. Help is strongly appreciated. See my progress at: [j.mp/bunniesalpha](http://j.mp/bunniesalpha)
 
 ## Description
 * A  HTML5 and CSS3 game built with jQuery, G. Maps API and Canvas Element. 
