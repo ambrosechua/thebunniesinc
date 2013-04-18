@@ -8,8 +8,10 @@ var interb=0;
 var interl=0;
 var interr=0;
 var player={
-	x: 0,
-	y: 0
+x: 0,
+y: 0,
+health: 100,
+weapon: 0
 };
 var evil=[];
 
@@ -19,19 +21,19 @@ return Math.atan2(bx-x, by-y)/Math.PI*-180;
 
 function dpf() {
 map.panBy(0, -step);
-player["x"]-=step;
+player.x-=step;
 }
 function dpb() {
 map.panBy(0, step);
-player["x"]+=step;
+player.x+=step;
 }
 function dpl() {
 map.panBy(-step, 0);
-player["y"]-=step;
+player.y-=step;
 }
 function dpr() {
 map.panBy(step, 0);
-player["y"]+=step;
+player.y+=step;
 }
 
 window.addEventListener('load', function(e) {
@@ -95,15 +97,15 @@ $("#dpf, #dpb, #dpl, #dpr").css("display", "none");
 
 //stackoverflow
 function getPosition(e) {
-    var targ;
-    if (!e)
-        e = window.event;
-    if (e.target)
-        targ = e.target;
-    else if (e.srcElement)
-        targ = e.srcElement;
-    if (targ.nodeType == 3)
-        targ = targ.parentNode;
+var targ;
+if (!e)
+e = window.event;
+if (e.target)
+targ = e.target;
+else if (e.srcElement)
+targ = e.srcElement;
+if (targ.nodeType == 3)
+targ = targ.parentNode;
 var x = e.pageX - $(targ).offset().left;
 var y = e.pageY - $(targ).offset().top;
 $("#dirh").css("transform", "rotate("+angle(x, y, $("#you").width()/2, $("#you").height()/2)+"deg)");
@@ -284,6 +286,7 @@ function getready() {
 $("#menu").fadeOut();
 $("#bar").css("background-color", "rgba(0, 0, 0, 0.5)");
 $("#sec").html("Ready");
+$("#bunny").fadeIn();
 setTimeout(function() {
 $("#sec").html("Set");
 }, 2000);
@@ -292,7 +295,6 @@ $("#sec").html("Go! ");
 }, 4000);
 setTimeout(function() {
 $("#kills").html("0 kills");
-
 $("#tgp").fadeIn().click(function() {
 end();
 });

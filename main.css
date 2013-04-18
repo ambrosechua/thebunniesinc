@@ -74,7 +74,7 @@ right: 10px;
 
 #bar {
 background-color: rgba(0, 0, 0, 0.0);
-z-index: 1;
+z-index: 2;
 color: #eee;
 padding: 10px 0px;
 position: absolute;
@@ -205,4 +205,34 @@ display: inline-block;
 float: left;
 display: inline-block;
 margin-left: 30px;
+}
+#frame {
+width: 0;
+height: 0;
+}
+#bunny {
+display: none;
+width: 100px;
+height: 175px;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-top: -82.5px;
+margin-left: -50px;
+background: url(assets/you.png);
+background-size: 100% 100%;
+z-index: 3;
+}
+.enemy {
+display: block;
+width: 100px;
+height: 175px;
+position: absolute;
+top: 0px;
+left: 0px;
+margin-top: 0px;
+margin-left: 0px;
+background: url(assets/eknife.png);
+background-size: 100% 100%;
+z-index: 1;
 }
