@@ -29,7 +29,7 @@ font-size: 20px;
 line-height: 20px;
 vertical-align: middle;
 overflow: hidden;
-cursor: url(cursor.png) 4 4, auto;
+cursor: url(assets/cursor.png) 4 4, auto;
 }
 #map_canvas {
 width: 100%;

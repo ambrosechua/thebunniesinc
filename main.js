@@ -1,15 +1,17 @@
 $(document).ready(function() {
 
-step=3;
-stti=10;
-frames=stti/2;
-interf=0;
-interb=0;
-interl=0;
-interr=0;
-player["x"]=0;
-player["y"]=0;
-evil;
+var step=3;
+var stti=10;
+var frames=stti/2;
+var interf=0;
+var interb=0;
+var interl=0;
+var interr=0;
+var player={
+	x: 0,
+	y: 0
+};
+var evil=[];
 
 function angle(x, y, bx, by) {
 return Math.atan2(bx-x, by-y)/Math.PI*-180;
@@ -31,16 +33,6 @@ function dpr() {
 map.panBy(step, 0);
 player["y"]+=step;
 }
-
-$("#endg").click(function() {
-window.location.reload();
-});
-$("#aboutc").click(function() {
-$("#aboutc").fadeOut();
-});
-$("#about").click(function() {
-$("#aboutc").fadeIn();
-});
 
 window.addEventListener('load', function(e) {
 window.applicationCache.addEventListener('updateready', function(e) {
@@ -313,5 +305,19 @@ timebefore=new Date().getTime();
 start();
 }, 4500);
 }
+
+$("#endg").click(function() {
+window.location.reload();
+});
+$("#aboutc").click(function() {
+$("#aboutc").fadeOut();
+});
+$("#about").click(function() {
+$("#aboutc").fadeIn();
+});
+
+$("#play").click(function() {
+getready();
+});
 
 });
