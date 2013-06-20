@@ -10,8 +10,9 @@ padding: 0;
 -ms-user-select: none;
 user-select: none;
 font-family: "Londrina Solid";
-box-sizing: border-box;
 -webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
 }
 html {
 height: 100%;
@@ -30,6 +31,91 @@ line-height: 20px;
 vertical-align: middle;
 overflow: hidden;
 cursor: url(assets/cursor.png) 4 4, auto;
+}
+#loading {
+background-color: #aaa;
+color: rgba(0, 0, 0, 0.5);
+text-align: center;
+z-index: 9990;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+backface-visibility: hidden;
+}
+#loadingc {
+position: absolute;
+top: 50%;
+left: 50%;
+z-index: 9999;
+margin: -50px 0 0 -100px;
+height: 100px;
+width: 200px;
+font-size: 20px;
+}
+
+@keyframes loading {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-moz-keyframes loading {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes loading {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-ms-keyframes loading {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-o-keyframes loading {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.loading {
+	width: 20px;
+	height: 20px;
+	margin-right: 0px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	border-top-right-radius: 0px;
+	-webkit-border-radius: 10px;
+	-webkit-border-top-right-radius: 0px;
+	-moz-border-radius: 10px;
+	-moz-border-top-right-radius: 0px;
+	-o-border-radius: 10px;
+	-o-border-top-right-radius: 0px;
+	-ms-border-radius: 10px;
+	-ms-border-top-right-radius: 0px;
+	animation: loading 1s infinite;
+	-webkit-animation: loading 1s infinite;
+	-moz-animation: loading 1s infinite;
+	-o-animation: loading 1s infinite;
+	-ms-animation: loading 1s infinite;
+	display: inline-block;
 }
 #map_canvas {
 width: 100%;
@@ -230,8 +316,8 @@ height: 175px;
 position: absolute;
 top: 0px;
 left: 0px;
-margin-top: 0px;
-margin-left: 0px;
+margin-top: -82.5px;
+margin-left: -50px;
 background: url(assets/eknife.png);
 background-size: 100% 100%;
 z-index: 1;

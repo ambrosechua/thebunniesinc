@@ -9,6 +9,13 @@
 <meta name="author" content="ambc">
 </head>
 <body>
+<div id="loading">
+<div id="loadingc">
+<div class="loading"></div>
+Loading...
+</div>
+</div>
+
 <div id="tgp">Pause</div>
 
 <div id="bar">
@@ -98,5 +105,10 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions)
 
 </script>
 <script type="text/javascript" src="main.js"></script>
+<script type="text/javascript">
+$(window).load(function () {
+$("#loading").fadeOut(300, function() { $(this).remove(); });
+});
+</script>
 </body>
 </html>

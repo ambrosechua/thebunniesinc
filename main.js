@@ -15,25 +15,43 @@ weapon: 0
 };
 var evil=[];
 
+function spawnevil() {
+newevil=$('<div class="evil"></div>');
+where=Math.floor(Math.random()+0.5);
+if (where==0) {
+top=0;
+left=Math.floor(Math.random()*window.innerWidth+0.5);
+}
+else if (where==1) {
+left=0;
+top=Math.floor(Math.random()*window.innerHeight+0.5);
+}
+else {
+alert("A bug has occured!");
+}
+newevil.css("left", left+"px");
+newevil.css("top", top+"px");
+}
+
 function angle(x, y, bx, by) {
 return Math.atan2(bx-x, by-y)/Math.PI*-180;
 }
 
 function dpf() {
 map.panBy(0, -step);
-player.x-=step;
+player.x -= step;
 }
 function dpb() {
 map.panBy(0, step);
-player.x+=step;
+player.x += step;
 }
 function dpl() {
 map.panBy(-step, 0);
-player.y-=step;
+player.y -= step;
 }
 function dpr() {
 map.panBy(step, 0);
-player.y+=step;
+player.y += step;
 }
 
 window.addEventListener('load', function(e) {
