@@ -31,7 +31,17 @@ Loading...
 
 <div id="menu">
 <h1>The Bunnies, Inc. <sup>ALPHA</sup></h1>
-<div id="play" class="btn">Play</div>
+<div id="play-holder">
+<div id="play-b-holder"><div id="play" class="btn">Play</div></div>
+<div id="opt-holder">
+<select id="opt-maptype">
+<option value="h">Hybrid</option>
+<option value="r">Roadmap</option>
+<option value="s" selected="selected">Satellite (Recomended)</option>
+<option value="t">Terrain</option>
+</select>
+</div>
+</div>
 <div id="high" class="btn" onClick="alert('The bunnies have not made this work yet! ');">Highscores</div>
 <div class="btn" id="about">About</div>
 <a href="http://ambrosechua.github.com/thebunniesinc/" class="btn">How to play</a>
@@ -88,18 +98,17 @@ Parts of this game includes code from other sources. <br />
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
-<script type="text/javascript">
-
 pos = new google.maps.LatLng(1.312548, 103.825548);
+
+google.maps.visualRefresh=true;
 var mapOptions = {
-	center: pos, 
-	zoom: 18, 
-	disableDefaultUI: true, 
-	draggable: false, 
-	scrollwheel: false, 
-	disableDoubleClickZoom: true, 
-	mapTypeId: google.maps.MapTypeId.SATELLITE
+    center: pos, 
+    zoom: 18, 
+    disableDefaultUI: true, 
+    draggable: false, 
+    scrollwheel: false, 
+    disableDoubleClickZoom: true, 
+    mapTypeId: google.maps.MapTypeId.SATELLITE
 };
 var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 

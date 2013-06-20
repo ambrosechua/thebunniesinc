@@ -31,6 +31,7 @@ alert("A bug has occured!");
 }
 newevil.css("left", left+"px");
 newevil.css("top", top+"px");
+$("#frame").append(newevil);
 }
 
 function angle(x, y, bx, by) {
@@ -338,6 +339,12 @@ $("#aboutc").fadeIn();
 
 $("#play").click(function() {
 getready();
+});
+
+$("#opt-maptype").change(function() {
+x=["h", "r", "s", "t"].indexOf($("#opt-maptype > option:selected").val());
+maptype=[google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.TERRAIN][x];
+map.setMapTypeId(maptype);
 });
 
 });

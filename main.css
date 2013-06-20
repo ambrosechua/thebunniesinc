@@ -2,16 +2,17 @@
 @import url(http://fonts.googleapis.com/css?family=Londrina+Solid|Londrina+Shadow);
 * {
 margin: 0;
-padding: 0;
+outline: none;
+padding: 0;/*
 -webkit-touch-callout: none;
 -webkit-user-select: none;
 -khtml-user-select: none;
 -moz-user-select: none;
--ms-user-select: none;
+-ms-user-select: none;*/
 user-select: none;
-font-family: "Londrina Solid";
+font-family: "Londrina Solid";/*
 -webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
+-moz-box-sizing: border-box;*/
 box-sizing: border-box;
 }
 html {
@@ -57,18 +58,18 @@ font-size: 20px;
 
 @keyframes loading {
 	from {
-		-webkit-transform: rotate(0deg);
-	}
-	to {
-		-webkit-transform: rotate(360deg);
-	}
-}
-@-moz-keyframes loading {
-	from {
 		transform: rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg);
+	}
+}/*
+@-moz-keyframes loading {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(360deg);
 	}
 }
 @-webkit-keyframes loading {
@@ -81,27 +82,27 @@ font-size: 20px;
 }
 @-ms-keyframes loading {
 	from {
-		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
 	}
 	to {
-		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
 	}
 }
 @-o-keyframes loading {
 	from {
-		transform: rotate(0deg);
+		-o-transform: rotate(0deg);
 	}
 	to {
-		transform: rotate(360deg);
+		-o-transform: rotate(360deg);
 	}
-}
+}*/
 .loading {
 	width: 20px;
 	height: 20px;
 	margin-right: 0px;
 	background-color: rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
-	border-top-right-radius: 0px;
+	border-top-right-radius: 0px;/*
 	-webkit-border-radius: 10px;
 	-webkit-border-top-right-radius: 0px;
 	-moz-border-radius: 10px;
@@ -109,12 +110,12 @@ font-size: 20px;
 	-o-border-radius: 10px;
 	-o-border-top-right-radius: 0px;
 	-ms-border-radius: 10px;
-	-ms-border-top-right-radius: 0px;
-	animation: loading 1s infinite;
+	-ms-border-top-right-radius: 0px;*/
+	animation: loading 1s infinite;/*
 	-webkit-animation: loading 1s infinite;
 	-moz-animation: loading 1s infinite;
 	-o-animation: loading 1s infinite;
-	-ms-animation: loading 1s infinite;
+	-ms-animation: loading 1s infinite;*/
 	display: inline-block;
 }
 #map_canvas {
@@ -188,7 +189,7 @@ bottom: 0;
 z-index: 6;
 background-color: rgba(0, 0, 0, 0.8);
 }
-#menu h1 {
+#menu > h1 {
 font-family: "Londrina Shadow";
 padding: 30px 10px;
 font-size: 30px;
@@ -243,7 +244,6 @@ left: 50%;
 top: 50%;
 z-index: 2;
 margin: -100px 0 0 -1px;
-transform: rotate(0deg);
 }
 #tgp {
 margin: 0;
@@ -277,7 +277,58 @@ display: none;
 line-height: 25px;
 font-size: 20px;
 }
-h1 sup {
+#play-holder {
+width: 600px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: -10px;
+}
+#play-b-holder {
+display: inline-block;
+}
+#opt-holder {
+display: inline-block;
+height: 0;
+overflow: hidden;
+transition: all 1s;
+float: right;
+color: #fff;
+font-size: 20px;
+width: 200px;
+/* background-color: rgba(255, 255, 255, 0.5); */
+text-decoration: none;
+margin-top: -42px;
+margin-right: -10px;
+background: rgba(255, 255, 255, 0.1) url(assets/wrench.png) no-repeat 5px 5px;
+}
+#play-holder:hover > #opt-holder {
+height: 75px;
+}
+#opt-holder > select {
+margin: 20px 20px;
+-webkit-appearance: none;
+color: #fff;
+padding: 3px;
+box-shadow: -5px -5px 1px rgba(255, 255, 255, 0.15);
+border: 1px dashed #fff;
+font-size: 15px;
+display: block;
+background-color: rgba(255, 255, 255, 0.3);
+text-decoration: none;
+border-radius: 0;
+background-image: none;
+letter-spacing: 1px;
+width: auto;
+}
+#opt-holder > select:hover {
+box-shadow: -3px -3px 1px rgba(255, 255, 255, 0.15);
+position: relative;
+top: -2px;
+left: -2px;
+background-color: rgba(255, 255, 255, 0.4);
+}
+
+h1 > sup {
 font-size: 13px;
 line-height: 13px;
 font-weight: 400;
