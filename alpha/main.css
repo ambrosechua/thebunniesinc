@@ -164,7 +164,7 @@ right: 10px;
 background-color: rgba(0, 0, 0, 0.0);
 z-index: 2;
 color: #eee;
-padding: 10px 0px;
+padding: 10px 20px;
 position: absolute;
 top: 0;
 left: 0;
@@ -273,10 +273,12 @@ top: 2px;
 }
 .menupg {
 display: none;
-}
-.menupg {
+
 line-height: 25px;
 font-size: 20px;
+}
+#menu {
+display: block;
 }
 
 #optionsc > select {
