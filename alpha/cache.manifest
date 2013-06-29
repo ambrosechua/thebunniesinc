@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# v2.0.0d14
+CACHE:
+index.html
+main.js
+main.css
+assets/cursor.png
+assets/ft.png
+assets/house.png
+assets/icon.png
+assets/pauseplay.png
+assets/the-bunnies.png
+assets/you.png
+NETWORK:
+*

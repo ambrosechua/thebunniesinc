@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmanifest="cache.manifest">
+<head>
+<title>The Bunnies, Inc. </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<link rel="icon" type="image/png" href="assets/icon.png" />
+<link rel="stylesheet" type="text/css" href="main.css" />
+<script type="text/javascript" src="http://github.com/LeaVerou/prefixfree/raw/gh-pages/prefixfree.min.js"></script>
+<meta name="author" content="ambc">
+</head>
+<body>
+<div id="loading">
+<div id="loadingc">
+<div class="loading"></div>
+Loading...
+</div>
+</div>
+
+<div id="tgp">Pause</div>
+
+<div id="bar">
+<div id="sec"></div>
+<div id="kills"></div>
+</div>
+
+<div id="tgpm">
+<h1>Paused</h1>
+<div id="cont" class="btn">&#9654; Continue playing</div>
+<div id="endg" class="btn">End game</div>
+</div>
+
+<div id="menu">
+<h1>The Bunnies, Inc. <sup>ALPHA</sup></h1>
+<div id="play-holder">
+<div id="play-b-holder"><div id="play" class="btn">Play</div></div>
+<div id="opt-holder">
+<select id="opt-maptype">
+<option value="h">Hybrid</option>
+<option value="r">Roadmap</option>
+<option value="s" selected="selected">Satellite (Recomended)</option>
+<option value="t">Terrain</option>
+</select>
+</div>
+</div>
+<div id="high" class="btn" onClick="alert('The bunnies have not made this work yet! ');">Highscores</div>
+<div class="btn" id="about">About</div>
+<a href="http://ambrosechua.github.com/thebunniesinc/" class="btn">How to play</a>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="ambrose.chua.cm@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="Ambrose Chua">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="currency_code" value="SGD">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_SM.gif:NonHostedGuest">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<span style="font-size: 12px;">Alpha Version 2.0.0 release 14</span>
+</div>
+
+<div id="aboutc">
+<h1>About</h1>
+The Bunnies Inc. by <!-- <img src="assets/ambc.png" width="50" /> -->ambc<br />
+<br />
+<h3>Starring</h3>
+The Bunnies, <br />
+Google Maps and <br />
+<!--<img src="assets/ft.png" width="200" /> -->
+<a href="http://www.w3.org/html/logo/">
+<img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-graphics-storage.png" width="197" height="64" alt="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, and Offline &amp; Storage">
+</a>
+<br />
+Entire game licensed under <a href="LICENSE.md">MIT</a>. <br />
+Parts of this game includes code from other sources. <br />
+<a href="https://github.com/ambrosechua/thebunniesinc/commits/master">Release history. </a> | <a href="http://ambrosechua.github.com/thebunniesinc/">Website. </a>
+</div>
+
+<canvas id="you"><h1>Aww, snap! </h1><p>Please use a updated browser to play. </p></canvas>
+
+<div id="frame">
+<div id="bunny"></div>
+<div class="enemy"></div>
+</div>
+
+<div id="dirh">
+<div id="dir">&nbsp;</div>
+</div>
+
+<div id="map_canvas"></div>
+
+<div id="dpf">&#9650;</div>
+<div id="dpb">&#9660;</div>
+<div id="dpl">&#9664;</div>
+<div id="dpr">&#9654;</div>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBTw2l8fjcXamgL0HasFr0CLPe54qFl_AA&sensor=true"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38941535-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+pos = new google.maps.LatLng(1.312548, 103.825548);
+
+google.maps.visualRefresh=true;
+var mapOptions = {
+    center: pos, 
+    zoom: 18, 
+    disableDefaultUI: true, 
+    draggable: false, 
+    scrollwheel: false, 
+    disableDoubleClickZoom: true, 
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+};
+var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+</script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript">
+$(window).load(function () {
+$("#loading").fadeOut(300, function() { $(this).remove(); });
+});
+</script>
+</body>
+</html>
