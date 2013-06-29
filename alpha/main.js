@@ -26,9 +26,6 @@ else if (where==1) {
 left=0;
 top=Math.floor(Math.random()*window.innerHeight+0.5);
 }
-else {
-alert("A bug has occured!");
-}
 newevil.css("left", left+"px");
 newevil.css("top", top+"px");
 $("#frame").append(newevil);
