@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 <link rel="icon" type="image/png" href="assets/icon.png" />
 <link rel="stylesheet" type="text/css" href="main.css" />
-<script type="text/javascript" src="http://github.com/LeaVerou/prefixfree/raw/gh-pages/prefixfree.min.js"></script>
+<script type="text/javascript" src="http://leaverou.github.io/prefixfree/prefixfree.min.js"></script>
 <meta name="author" content="ambc">
 </head>
 <body>
@@ -98,6 +98,22 @@ Parts of this game includes code from other sources. <br />
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBTw2l8fjcXamgL0HasFr0CLPe54qFl_AA&sensor=true"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
+
+(function($, self){
+
+if(!$ || !self) {
+  return;
+}
+
+for(var i=0; i<self.properties.length; i++) {
+  var property = self.properties[i],
+    camelCased = StyleFix.camelCase(property),
+    PrefixCamelCased = self.prefixProperty(property, true);
+  
+  $.cssProps[camelCased] = PrefixCamelCased;
+}
+
+})(window.jQuery, window.PrefixFree);
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-38941535-1']);
