@@ -5,8 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 <link rel="icon" type="image/png" href="assets/icon.png" />
-<link rel="stylesheet" type="text/css" href="main.css" />
 <script type="text/javascript" src="http://leaverou.github.io/prefixfree/prefixfree.min.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css" />
 <meta name="author" content="ambc">
 </head>
 <body>
@@ -24,17 +24,8 @@ Loading...
 <div id="kills"></div>
 </div>
 
-<div id="tgpm">
-<h1>Paused</h1>
-<div id="cont" class="btn">&#9654; Continue playing</div>
-<div id="endg" class="btn">End game</div>
-</div>
-
-<div id="menu">
-<h1>The Bunnies, Inc. <sup>ALPHA</sup></h1>
-<div id="play-holder">
-<div id="play-b-holder"><div id="play" class="btn">Play</div></div>
-<div id="opt-holder">
+<div id="optionsc" class="menupg">
+<h1>Options</h1>
 <select id="opt-maptype">
 <option value="h">Hybrid</option>
 <option value="r">Roadmap</option>
@@ -42,9 +33,20 @@ Loading...
 <option value="t">Terrain</option>
 </select>
 </div>
+
+<div id="tgpm" class="menupg">
+<h1>Paused</h1>
+<div id="cont" class="btn">&#9654; Continue playing</div>
+<div id="endg" class="btn">End game</div>
+<div class="btn options">Options</div>
 </div>
+
+<div id="menu" class="menupg">
+<h1>The Bunnies, Inc. <sup>ALPHA</sup></h1>
+<div id="play" class="btn">Play</div>
 <div id="high" class="btn" onClick="alert('The bunnies have not made this work yet! ');">Highscores</div>
 <div class="btn" id="about">About</div>
+<div class="btn options">Options</div>
 <a href="http://ambrosechua.github.com/thebunniesinc/" class="btn">How to play</a>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_donations">
@@ -61,7 +63,7 @@ Loading...
 <span style="font-size: 12px;">Alpha Version 2.0.0 release 14</span>
 </div>
 
-<div id="aboutc">
+<div id="aboutc" class="menupg">
 <h1>About</h1>
 The Bunnies Inc. by <!-- <img src="assets/ambc.png" width="50" /> -->ambc<br />
 <br />

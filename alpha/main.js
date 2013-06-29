@@ -333,6 +333,12 @@ $("#aboutc").fadeOut();
 $("#about").click(function() {
 $("#aboutc").fadeIn();
 });
+$("#optionsc").click(function() {
+$("#optionsc").fadeOut();
+});
+$(".options").click(function() {
+$("#aboutc").fadeIn();
+});
 
 $("#play").click(function() {
 getready();
