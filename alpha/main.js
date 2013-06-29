@@ -337,7 +337,7 @@ $("#optionsc").click(function() {
 $("#optionsc").fadeOut();
 });
 $(".options").click(function() {
-$("#aboutc").fadeIn();
+$("#optionsc").fadeIn();
 });
 
 $("#play").click(function() {
