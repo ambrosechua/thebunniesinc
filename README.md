@@ -1,10 +1,6 @@
-# [The Bunnies, Inc. ](http://ambrosechua.github.com/thebunniesinc)
-
-Follow [@thebunniesinc](http://twitter.com/thebunniesinc) for updates. 
+# [The Bunnies, Inc. ](http://ambrosechua.github.com/thebunniesinc) (discontinued, feel free to steal)
 
 **WARNING** Game is not playable. Proceed at your own risk. 
-
-The Bunnies, Inc is still in alpha. Help is strongly appreciated. See my progress at: [j.mp/bunniesalpha](http://j.mp/bunniesalpha)
 
 ## Description
 * A  HTML5 and CSS3 game built with jQuery, G. Maps API and Canvas Element. 
